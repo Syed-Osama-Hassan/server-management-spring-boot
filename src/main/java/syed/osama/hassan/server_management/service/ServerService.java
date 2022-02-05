@@ -2,6 +2,7 @@ package syed.osama.hassan.server_management.service;
 
 import syed.osama.hassan.server_management.model.Server;
 
+import java.io.IOException;
 import java.util.Collection;
 
 /**
@@ -24,7 +25,7 @@ public interface ServerService
      * @param ipAddress
      * @return
      */
-    Server ping(String ipAddress);
+    Server ping(String ipAddress) throws IOException;
 
     /**
      * Return all servers by limit

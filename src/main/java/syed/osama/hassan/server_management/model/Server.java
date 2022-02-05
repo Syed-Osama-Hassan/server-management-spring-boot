@@ -1,6 +1,5 @@
 package syed.osama.hassan.server_management.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import syed.osama.hassan.server_management.enumeration.Status;
@@ -15,7 +14,6 @@ import javax.validation.constraints.NotEmpty;
 @Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class Server
 {
     @Id
@@ -29,4 +27,13 @@ public class Server
     private String type;
     private String imageUrl;
     private Status status;
+
+    public Server(String ipAddress, String name, String memory, String type, String imageUrl, Status status) {
+        this.ipAddress = ipAddress;
+        this.name = name;
+        this.memory = memory;
+        this.type = type;
+        this.imageUrl = imageUrl;
+        this.status = status;
+    }
 }
